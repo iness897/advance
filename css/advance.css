@@ -1,0 +1,169 @@
+/* style globaux*/
+
+html{scroll-behavior:smooth;}
+img{max-width:100%}
+.container{max-width:1324px; width: 95%; margin-left:auto; margin-right:auto;}
+.clearfix::after {clear:both; content:"."; display:block; height:0; line-height:0; visibility:hidden}
+a{text-decoration: none; border:0;} /*supprimer les option sur le texte (souligné,...)*/
+*{box-sizing: border-box;} /*limite la taille au width*/
+
+header{background-color:black}
+header a, header a:visited{color: white}
+header a:hover{color: red}
+
+@font-face{src:url("../fonts/OpenSans-Light.ttf");font-family:"Open Sans";}
+body{font-family: "Open Sans"}
+body{ position: relative;}
+ul{list-style:none;padding:0;}
+
+#menu1{text-align: right}
+#menu1,#navbar.sticky #menu1{display: none;}
+#menu1 a{margin: 8px}
+#menu1 a:hover,#menu2 a:hover{color: red}
+#menu2 nav{height:0; overflow:hidden;}
+#menu2 li{margin-right:20px}
+#menu2 li{margin-bottom: 3px}
+
+.burger{appearance:none;-moz-appearance:none;-webkit-appearance:none;outline:none;color:white;cursor:pointer;font-size:1.5rem;margin:0;position:absolute;top:7px;right:10px}
+.burger::before{content:'\f0c9'}
+.burger:checked::before{content:"\f00d"}
+.burger:checked+nav{padding-bottom:325px}
+.sous-menu{padding: 10px; background-color: black}
+
+#navbar{position: fixed; top: 0; width: 100%;z-index: 10000; box-shadow: 1px 1px 10px white}
+#navbar.sticky #logo{width: 100px}
+
+#logo{display: inline-block;vertical-align:middle;}
+
+#intro{background-color: black; border-radius: 20px; padding: 3rem;color: white; margin-top: 1rem}
+#intro h1{text-align: right}
+#intro h1::first-letter{background-color: white; color: black;padding: 5px; margin-right: 5px;}
+
+main{background-color: #ccc;}
+h2{background-color: black;color: white;padding: 5px; display: inline-block; margin-top: 0;}
+h2::before{content: "\f061";font-family: FontAwesome;color: red;margin-right: 3px}
+
+#last{background-color: #ddd;padding: 2rem;border-radius: 10px;margin-top: 2rem}
+#last a{padding: 2rem;background-color: white;text-align: center;}
+#last div, #best div{text-align: center;}
+#last a:link, #last a:visited,#best a:link, #best a:visited {color: black}
+#last a:hover, #best a:hover{color: red} 
+#last a,#best a{display: inline-block; margin-top: 20px}
+
+#best{background-color: #ddd;padding: 2rem;border-radius: 10px;margin-top: 2rem}
+#best a{padding: 2rem;background-color: white;text-align: center;}
+#best div{text-align: center;}
+
+#parallax{text-align: center; background-image: url(../img/wtx-case.jpg);background-repeat: no-repeat; background-position: center; padding: 100px 0 100px}
+#parallax div{background-color: white;color: black;padding: 20px;box-shadow: 5px 5px 20px 10px; display: inline-block;}
+#parallax h2{background-color: white;color: black; margin-bottom: 5px}
+
+#focus{background-color: black;color: white; padding: 20px 50px}
+#focus h2{background-color: #ccc; color: black; padding: 5px}
+
+table{border-collapse: collapse;width: 100%}
+td{border:1px solid white; padding: 5px;width: 50%}
+tbody tr:nth-of-type(2n){background-color: #ddd}
+tbody tr:nth-of-type(2n+1){background-color: #333;color:black}
+tbody tr:nth-of-type(odd){background-color:#333;color:white}
+
+#focus article{padding:20px;}
+#focus a{background-color:red;color:white;padding:5px;margin:0 auto;}
+
+#partage{padding:10px; background-color: black; text-align: center; box-shadow: 5px 1px 30px 5px white;}
+#partage a{color: white}
+#partage h3{display: inline-block; color: white;}
+#partage i{font-size: 2rem}
+
+#reassurance{background-color:white;display:flex;flex-wrap:wrap;justify-content:space-around;padding: 3% 0%;}
+#reassurance a{color:black;}
+#reassurance a:hover,#partage a:hover{color:red;}
+
+
+
+#actualites{background-color:white; padding: 2rem}
+#actualites article{padding:20px 50px;}
+#actualites div{text-align:center;}
+#actualites img{width:100%;height:150px;object-fit:cover;}
+
+.cta{background-color:red;color:white;padding:3px 7px;margin:0 auto;display:inline-block;border:none;font-size:1.1rem;}
+.cta:hover{box-shadow:0 0 0 5px red;transition:0.2s;}
+#distributeurs div{text-align:center;}
+#map{height:500px;}
+.leaflet-top{left:49%;}
+
+footer{background-color:black; color: white; padding: 30px 0;}
+footer a:link, footer a:visited{color: white;} 
+footer a:hover{color: red;}
+footer address, footer nav{flex-basis: 25%;text-align:center;}
+.video {height:0; overflow:hidden; padding-bottom:56.25%; padding-top:25px; position:relative}
+.video iframe {height:100%; left:0; position:absolute; top:0; width:100%; border: 0;}
+
+#triangle-code{display : inline-block; height : 0; width : 0; border-right : 35px solid transparent; border-bottom : 35px solid red; border-left : 35px solid transparent}
+#gototop{ position: absolute;bottom:10px;right:10px}
+
+.progress-container{width:100%;height:2px}
+.progress-bar{height:2px;background:red;width:0%}
+
+#diaporama{overflow:hidden}
+#navbar.sticky+main{padding-top:46px}
+#diaporama figure{position:relative;width:300%;margin:0;left:0;text-align:left;font-size:0;animation:diaporama 10s infinite alternate}
+#diaporama img{width:33.33%;float:left; padding-top: 70px}
+@keyframes diaporama{0%{left:0%}30%{left:0%}35%{left:-100%}65%{left:-100%}70%{left:-200%}100%{left:-200%}}
+
+/*RWD*/
+
+@media screen and (min-width: 572px){
+	#last a{float:left;margin-left: 1%; margin-top: 1%; width: 49.5%;}
+	#last a:nth-of-type(2n+1){margin-left: 0;}
+	#focus{display: flex;flex-wrap:wrap;}
+	#focus article{flex-basis: 50%;}
+	#best{display: grid;grid-template-columns: repeat(2, 1fr); grid-gap: 1%;}
+	#best div{grid-column: 1/-1}
+	#partage a{font-size:1rem;}
+	#partage{position:fixed;left:0;top:25%;padding:10px;display: flex;flex-direction: column;border-radius: 0px 15px 15px 0px;}
+	#partage h3 {display: none;}
+	footer div{display:flex;justify-content:space-around;}
+	footer address {text-align: left;}
+    footer nav:nth-of-type(odd){text-align: right;}
+    footer nav:nth-of-type(1){margin-right: 10px;}
+    footer nav:nth-of-type(2){text-align: left;}
+    footer nav:nth-of-type(1) h3::after{content:"";display:block;background-color: red;	height: 6px; width: 50px;margin-left: auto;}
+	footer nav:nth-of-type(2) h3::after{content:"";display:block;background-color: red;height: 6px;width: 50px;margin-right: auto;}
+	footer nav:nth-of-type(1){padding-right:10px;border-right: 1px solid white;}
+	#menu2 nav > ul > li{display:inline-block;text-align: left;}
+	.burger:checked + nav{padding-bottom: 160px}
+} 
+@media screen and (min-width: 768px){
+	#intro img{float: left;margin-right: 2rem; width:50%;}
+	#logo{width: 164px}
+	#menu1{display:block;text-align:right;}
+	#menu2 nav{height:auto;display:inline-block;vertical-align:middle;margin-left:20px}
+	#partage{position: fixed; left:0; top:25%;border-radius: 0px 15px 15px 0px;} /* fixe la position sur L'ECRAN*/
+	#partage h3{display: none;}
+	#partage a{display: block;}
+	.burger{display:none}
+	.burger:checked+nav{padding-bottom:0}
+	.sous-menu{display: none}
+	#menu2 nav > ul > li:hover .sous-menu{display: block; position: absolute;}
+	#menu2 nav > ul > li{display:inline-block;}
+	.burger:checked + nav{padding-bottom: 0px}
+
+	}
+
+@media screen and (min-width: 1200px){
+	#last a{width: 24.25%;} 
+	#last a:nth-of-type(2n+1){margin-left: 1%;} 
+	#last a:nth-of-type(4n+1){margin-left: 0;} /*retirer la marge sur le premier*/
+	#focus article{flex-basis: 25%}
+	#actualites{column-count:3;column-gap:20px;column-rule:1px solid;margin-bottom:20px;margin-top:20px;}
+	#actualites div{column-span:all;}
+	#focus article:nth-of-type(1){order:1}
+	#focus article:nth-of-type(2){order:2}
+	#focus article:nth-of-type(3){order:3}
+	#focus article:nth-of-type(4){order:4}
+	#focus article{padding: 20px}
+	#focus a{order: 5}
+	#best{grid-template-columns: repeat(4,1fr);}
+
+} 
